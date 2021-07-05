@@ -110,6 +110,7 @@ font-family: 'Josefin Sans', sans-serif;*/
   text-shadow: 2px 2px 5px rgba(20, 20, 20, 0.575);
 }
 
+/* || Menu */
 #menu-btn-container {
   position: fixed;
   top: 5px;
@@ -126,11 +127,10 @@ font-family: 'Josefin Sans', sans-serif;*/
   cursor: pointer;
   transform-origin: center;
 }
-/* || menu */
 .menu-circles {
   width: 13px;
   aspect-ratio: 1/1;
-  border: 0.18rem solid var(--primaryColor);
+  border: 0.18rem solid #fefefe;
   border-radius: 50%;
 }
 
@@ -144,7 +144,8 @@ font-family: 'Josefin Sans', sans-serif;*/
 }
 
 .menu-btn-open .menu-circles {
-  background: var(--primaryColor);
+  background: #fefefe;
+  border: none;
 }
 
 .links-container {
@@ -166,6 +167,26 @@ font-family: 'Josefin Sans', sans-serif;*/
 .links-container-open {
   transform: translateX(0);
   opacity: 1;
+}
+
+.navbar-links {
+  text-decoration: none;
+  color: #f8f8f8;
+  text-transform: uppercase;
+  text-align: left;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.tema-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  position: absolute;
+  bottom: 20px;
+}
+#tema-name {
+  text-transform: uppercase;
+  color: #f8f8f8;
 }
 
 /* || section: inicio */
@@ -212,7 +233,7 @@ font-family: 'Josefin Sans', sans-serif;*/
 /* || animations **/
 @keyframes menuBtnHover {
   100% {
-    background: var(--primaryColor);
+    background: #fefefe;
   }
 }
 
@@ -227,7 +248,7 @@ font-family: 'Josefin Sans', sans-serif;*/
     transform: rotate(100deg);
   }
 }
-/* || responsivilidade */
+/* || responsivilidade desktop/tablet */
 @media screen and (max-width: 1065px) {
   /* || general styles */
   .grid-container {
@@ -255,5 +276,31 @@ font-family: 'Josefin Sans', sans-serif;*/
   }
   #it-text {
     width: 470px;
+  }
+}
+
+/* || responsivilidade desktop/tablet */
+@media screen and (max-width: 500px) {
+  /* || Menu */
+
+  .links-container {
+    width: 100%;
+    height: 100vh;
+    transform: translateX(-28rem);
+  }
+  .links-container-open {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  /* || section: inicio */
+  #it-title {
+    font-size: 1.8rem;
+  }
+  .tl-descrition {
+    font-size: 1rem;
+  }
+  #it-text {
+    font-size: 17px;
+    width: 400px;
   }
 }
