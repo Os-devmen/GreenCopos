@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/phosphor-icons"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Greencups</title>
+</head>
+
+<body>
+<button id="menu-btn-container" class="reset">
+        <div class="menu-btn">
+            <div class="menu-circles" style="--order: 3"></div>
+            <div class="menu-circles" style="--order: 4"></div>
+            <div class="menu-circles" style="--order: 2"></div>
+            <div class="menu-circles" style="--order: 1"></div>
+    </div>
+</button>
+<div id="navbar">
+    <p id="logo" class="center-absoulte"><span style="color: var(--primaryColor);">Green</span>copos</p>
+   <div class="links-container flex-column-center">
+    <a href="#" class="navbar-links">inicio</a>
+    <a href="#" class="navbar-links">alguma</a>
+    <a href="#" class="navbar-links">
+         Motivos
+         <i class="ph-caret-up"></i>
+    </a>
+    <div class="dropdown">
+        <a href="#">Gasto de água</a>
+        <a href="#">Tempo de decomposição</a>
+        <a href="#">Maleficios à saúde</a>
+    </div>
+    <a href="#" class="navbar-links">cebola</a>
+    <div class="tema-container">
+        <div id="tema-escuro" class="flex-row-center" style="gap: 10px;">
+            <p class="heading4" style="text-transform: uppercase;">Escuro</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#000000" viewBox="0 0 256 256">
+                <path d="M216.66238,152.64951A92.03175,92.03175,0,0,1,103.35039,39.338l.00255.00078A92.01376,92.01376,0,1,0,216.66147,152.64624Z" fill="none" stroke="#00a767" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path>
+            </svg>
+           </div>
+       <div id="tema-claro" class="flex-row-center" style="gap: 10px;">
+        <p class="heading4" style="text-transform: uppercase;">Claro</p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#000000" viewBox="0 0 256 256">
+            <circle cx="128" cy="128" r="60" fill="none" stroke="#00a767" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></circle>
+            <line class="sunline" x1="128" y1="36" x2="128" y2="28" fill="none" stroke="#00a767" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+            <line class="sunline" x1="62.94618" y1="62.94618" x2="57.28932" y2="57.28932" fill="none" stroke="#00a767" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+            <line class="sunline" x1="36" y1="128" x2="28" y2="128" fill="none" stroke="#00a767" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+            <line class="sunline" x1="62.94618" y1="193.05382" x2="57.28932" y2="198.71068" fill="none" stroke="#00a767" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+            <line class="sunline" x1="128" y1="220" x2="128" y2="228" fill="none" stroke="#00a767" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+            <line class="sunline" x1="193.05382" y1="193.05382" x2="198.71068" y2="198.71068" fill="none" stroke="#00a767" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+            <line class="sunline" x1="220" y1="128" x2="228" y2="128" fill="none" stroke="#00a767" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+            <line class="sunline" x1="193.05382" y1="62.94618" x2="198.71068" y2="57.28932" fill="none" stroke="#00a767" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+        </svg>
+       </div>
+    </div>
+</div>
+</div>
+<section id="inicio" class="grid-container">
+   <div class="flex-column-center">
+       <img src="./img/img-copo-logo.svg" id="img-copo" alt="img-copo" width="400px" height="auto">
+   </div>
+   <div id="inicio-text" class="flex-column-center" style="gap: 15px">
+       <h1 id="it-title">copos ecológicos<br>porque usar</h1>
+       <div class="flex-row-center" style="gap: 3px;">
+            <p class="tl-descrition">Reutilizavel</p>
+            <div class="vl"></div>
+            <p class="tl-descrition">Sustentavel</p>
+            <div class="vl"></div>
+            <p class="tl-descrition">Económico</p>
+       </div>
+       <p id="it-text">
+        Todos os anos, 8 milhões de toneladas de plástico
+        são despejadas nos oceanos, causando a morte de
+        milhares de animais, por isso os copos ecologicos
+        ser mais usados e assim restaurar a harmonia 
+        do nosso ecossitema.
+       </p>
+   </div>
+</section>
+<section id="teste" class="section"></section>
+<script>
+    const navBtn = document.getElementById("menu-btn-container");
+    navBtn.addEventListener("click", () =>{
+        document.querySelector('.menu-btn').classList.toggle('menu-btn-open')
+        document.querySelector('.links-container').classList.toggle('links-container-open')
+    })
+
+    const temaBtn = document.querySelector(".tema-container");
+    temaBtn.addEventListener("click", () =>{
+       temaBtn.classList.toggle('tema-container-on');
+    })
+</script>
+<script src="./script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,259 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@import url("https://fonts.googleapis.com/css2?family=Cardo:wght@700&family=Josefin+Sans&display=swap");
+
+body {
+  font-family: var(--font2);
+  color: var(--color2);
+}
+/*font-family: 'Cardo', serif;
+font-family: 'Josefin Sans', sans-serif;*/
+
+/* || vars */
+:root {
+  --bgColor: #fff;
+  --primaryColor: #1dee3e;
+  --color2: #262626;
+  --font1: "Cardo", serif;
+  --font2: "Josefin Sans", sans-serif;
+}
+/* || General Styles */
+
+.section {
+  width: 100%;
+  height: 39rem;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.flex-column-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-row-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reset {
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.center-absoulte {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.v-center-absoulte {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* || Typografi */
+.heading1 {
+  font-family: var(--font1);
+  font-size: 3rem;
+  font-weight: 540;
+  text-transform: uppercase;
+}
+
+.heading2 {
+  font-family: var(--font1);
+  color: var(--primaryColor);
+  font-size: 3rem;
+  font-weight: 540;
+}
+
+.heading3 {
+  font-size: 2rem;
+}
+
+.heading4 {
+  color: var(--primaryColor);
+  font-size: 1.5rem;
+}
+/* || Navbar */
+#navbar {
+  height: 3rem;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+}
+
+.nav-down {
+  background: rgba(0, 0, 0, 0.171);
+  backdrop-filter: blur(2px);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.507);
+}
+.nav-down #logo {
+  text-shadow: none;
+}
+
+#logo {
+  color: #fff;
+  font-family: var(--font1);
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  text-shadow: 2px 2px 5px rgba(20, 20, 20, 0.575);
+}
+
+#menu-btn-container {
+  position: fixed;
+  top: 5px;
+  left: 10px;
+  z-index: 10000;
+}
+.menu-btn {
+  width: 35px;
+  aspect-ratio: 1/1;
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  cursor: pointer;
+  transform-origin: center;
+}
+/* || menu */
+.menu-circles {
+  width: 13px;
+  aspect-ratio: 1/1;
+  border: 0.18rem solid var(--primaryColor);
+  border-radius: 50%;
+}
+
+.menu-btn:hover .menu-circles {
+  animation: menuBtnHover 150ms linear 1 forwards;
+  animation-delay: calc(var(--order) * 50ms);
+}
+
+.menu-btn-open {
+  animation: menuOpen 1.5s cubic-bezier(0.35, -0.07, 0.09, 1.18) forwards;
+}
+
+.menu-btn-open .menu-circles {
+  background: var(--primaryColor);
+}
+
+.links-container {
+  position: fixed;
+  top: 0;
+  left: 0rem;
+  transform: translateX(-17rem);
+  gap: 30px;
+  height: 39rem;
+  width: 17rem;
+  background: rgba(20, 20, 20, 0.575);
+  backdrop-filter: blur(3px);
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.397);
+  opacity: 0.7;
+  transition: transform 900ms cubic-bezier(0.35, -0.07, 0.09, 1.18);
+  z-index: 100;
+}
+
+.links-container-open {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* || section: inicio */
+#inicio {
+  background: url("./img/imagem\ floresta.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 39rem;
+}
+
+#inicio-text {
+  position: relative;
+  right: 10px;
+  color: #fefefe;
+}
+
+#it-title {
+  text-align: center;
+  font-family: var(--font1);
+  text-transform: uppercase;
+  font-size: 3rem;
+  letter-spacing: 1px;
+}
+
+.tl-descrition {
+  color: var(--primaryColor);
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.8rem;
+  text-shadow: 2px 2px 5px rgba(20, 20, 20, 0.575);
+}
+
+.vl {
+  height: 100%;
+  width: 3px;
+  background: var(--primaryColor);
+}
+
+#it-text {
+  width: 90%;
+  text-align: left;
+  font-size: 1.3rem;
+}
+/* || animations **/
+@keyframes menuBtnHover {
+  100% {
+    background: var(--primaryColor);
+  }
+}
+
+@keyframes menuOpen {
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes sunLine {
+  100% {
+    transform: rotate(100deg);
+  }
+}
+/* || responsivilidade */
+@media screen and (max-width: 1065px) {
+  /* || general styles */
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  /* || section: inicio */
+  #inicio {
+    height: 100%;
+  }
+
+  #inicio-text {
+    right: 0;
+  }
+  #img-copo {
+    margin-top: 70px;
+    width: 300px;
+  }
+  #it-title {
+    font-size: 2.5rem;
+  }
+  .tl-descrition {
+    font-size: 1.4rem;
+  }
+  #it-text {
+    width: 470px;
+  }
+}
