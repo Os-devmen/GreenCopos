@@ -343,5 +343,12 @@ font-family: 'Josefin Sans', sans-serif;*/
     transform: translateX(0);
     opacity: 1;
   }
-  /* || section: inicio */
+  /* || section: prologo */
+  #prologo {
+    align-items: center;
+    height: 25vh;
+  }
+  #prologo-wrapper {
+    width: 350px;
+  }
 }
