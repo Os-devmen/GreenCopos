@@ -272,6 +272,7 @@ font-family: 'Josefin Sans', sans-serif;*/
   margin: 5px;
   width: 550px;
   height: 90px;
+  border-radius: 5px;
 }
 #prologo-text {
   margin-right: 10px;
@@ -286,9 +287,35 @@ font-family: 'Josefin Sans', sans-serif;*/
 }
 
 /* || section: callouts */
-#callout1 {
+#callouts {
+  overflow: hidden;
+  height: 100vh;
+}
+#bg-callout1 {
   background: url("./img/callout1.jpg");
+  background-position-y: -600px; /* 570px*/
   background-size: cover;
+}
+
+.callout-wrapper {
+  background: var(--primaryColor);
+  width: clamp(60%, 80%, 600px);
+  height: 250px;
+  background: rgba(0, 0, 0, 0.322);
+  border-radius: 5px;
+  backdrop-filter: blur(4px);
+  padding: 10px;
+}
+.callout-wrapper span {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: var(--font1);
+  color: var(--primaryColor);
+  font-size: 2rem;
+}
+.callout-wrapper p {
+  font-size: 1rem;
+  color: #fefefe;
 }
 
 /* || animations **/
@@ -328,6 +355,11 @@ font-family: 'Josefin Sans', sans-serif;*/
   #img-copo {
     margin-top: 70px;
     width: 300px;
+  }
+
+  /* || section: inicio */
+  #bg-callout1 {
+    background-position-y: bottom;
   }
 }
 
