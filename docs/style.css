@@ -288,6 +288,7 @@ font-family: 'Josefin Sans', sans-serif;*/
 
 /* || section: callouts */
 #callouts {
+  position: relative;
   overflow: hidden;
   height: 100vh;
 }
