@@ -6,3 +6,11 @@ window.addEventListener('scroll', () => {
     else
         navbar.className = "nav-down";     
 })
+
+// dark-mode
+const darkModeBtn = document.querySelector("#theme-btn");
+
+darkModeBtn.addEventListener("click", () => {
+  document.body.classList.toggle("dark-theme")
+});
+
