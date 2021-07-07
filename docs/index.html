@@ -6,10 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://unpkg.com/phosphor-icons"></script>
+    <link rel="shortcut icon" href="./img/iconeSite.svg" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="./animations.css">
     
-    <title>Greencups</title>
+    <title>GreenCopos</title>
 </head>
 
 <body>
@@ -21,6 +22,7 @@
             <div class="menu-circles" style="--order: 1"></div>
     </div>
 </button>
+
 <button class="" id="theme-btn">
     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 472.39 472.39">
       <g class="toggle-sun">
@@ -30,7 +32,8 @@
         <circle class="cls-1" cx="236.2" cy="236.2" r="103.78" />
       </g>
     </svg>
-  </button>
+</button>
+
 <div>
     <div class="links-container flex-column-center">
         <a href="#" class="navbar-links">Início</a>
@@ -44,6 +47,7 @@
 <div id="navbar">
     <p id="logo" class="center-absoulte"><span style="color: var(--primaryColor);">Green</span>copos</p>
 </div>
+
 <section id="inicio" class="grid-container">
     <div id="bg-inicio" class="img-bg bew"></div>
    <div class="flex-column-center">
@@ -157,18 +161,6 @@
     </div>
 </section>
 
-<script>
-    const navBtn = document.getElementById("menu-btn-container");
-    navBtn.addEventListener("click", () =>{
-        document.querySelector('.menu-btn').classList.toggle('menu-btn-open')
-        document.querySelector('.links-container').classList.toggle('links-container-open')
-    })
-
-    const temaBtn = document.querySelector(".tema-container");
-    temaBtn.addEventListener("click", () =>{
-       temaBtn.classList.toggle('tema-container-on');
-    })
-</script>
 <script src="./script.js"></script>
 </body>
 
