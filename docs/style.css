@@ -96,7 +96,7 @@ body {
   outline: none;
 }
 
-.center-absoulte {
+.center-absolute {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -131,7 +131,7 @@ body {
 .heading2 {
   font-family: var(--font1);
   color: var(--primaryColor);
-  font-size: clamp(1.5rem, 2.8rem, 4vw);
+  font-size: clamp(1.9rem, 2.8rem, 4vw);
   font-weight: 540;
   text-align: center;
 }
@@ -397,7 +397,82 @@ body {
   aspect-ratio: 1/1;
   border-radius: 4px;
 }
+/* || soluções section */
+#solution {
+  margin-top: 5vh;
+  display: grid;
+  grid-template-rows: 80px 80vh 80vh;
+  height: 100%;
+}
 
+.solution-box {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.solution-box p {
+  text-align: justify;
+  line-height: 35px;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  width: clamp(400px, 60%, 600px);
+}
+
+#globo-box {
+  width: 305px;
+  height: 305px;
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
+}
+#globo-box * {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+#globo-arrows {
+  top: 46%;
+}
+
+#solution-imgs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-row: 1fr 1fr;
+}
+/* || video section */
+
+/* || cards section */
+
+/* || footer section */
+footer {
+  width: 100%;
+  height: 20vh;
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  background: #0e0d0d;
+}
+
+.footer-links {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+#footer-name {
+  position: relative;
+  right: 90px;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-family: var(--font1);
+}
+
+#footer-links-wrappers {
+  display: flex;
+  gap: 10%;
+}
 /* || responsivilidade desktop/tablet */
 @media screen and (max-width: 1065px) {
   /* || general styles */
@@ -425,9 +500,31 @@ body {
   }
 
   /* || section: motivos */
+  #motivos {
+    height: 100%;
+    display: grid;
+    grid-template-rows: 100px 100%;
+  }
+
   .topic-wrapper {
-    grid-template-columns: 1fr;
-    grid-template-rows: 30vh auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .topic-text-wrapper {
+    padding: 20px;
+  }
+  .topic-text {
+    width: clamp(50%, 90%, 70%);
+    font-size: 1.1rem;
+  }
+
+  .topic-img {
+    border: 2px solid var(--primaryColor);
+    width: 300px;
+    height: 300px;
+    aspect-ratio: 1/1;
+    border-radius: 4px;
   }
 }
 
