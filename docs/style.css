@@ -190,6 +190,7 @@ body {
 }
 .menu-circles {
   width: 13px;
+  height: 13px;
   aspect-ratio: 1/1;
   border: 0.18rem solid #fefefe;
   border-radius: 50%;
