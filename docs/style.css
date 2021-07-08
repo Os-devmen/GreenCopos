@@ -190,8 +190,8 @@ body {
 }
 .menu-circles {
   width: 13px;
-  height: 13px;
   aspect-ratio: 1/1;
+  height: 13px;
   border: 0.18rem solid #fefefe;
   border-radius: 50%;
 }
@@ -216,7 +216,7 @@ body {
   left: 0rem;
   transform: translateX(-17rem);
   gap: 30px;
-  height: 39rem;
+  height: 100vh;
   width: 17rem;
   background: rgba(20, 20, 20, 0.575);
   backdrop-filter: blur(3px);

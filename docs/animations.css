@@ -44,3 +44,25 @@
     transform: translateX(-50%) rotate(360deg);
   }
 }
+
+/* relogio */
+#relogio-svg {
+  position: relative;
+  left: 11px;
+}
+#clock-arrow {
+  position: relative;
+  top: 2px;
+  transform-origin: bottom;
+  animation: ponteiro 6s linear infinite;
+  transform-box: fill-box;
+}
+
+@keyframes ponteiro {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
