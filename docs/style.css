@@ -455,7 +455,7 @@ body {
 }
 /* || video section */
 #video {
-  height: 100%;
+  margin-bottom: 10vh;
   grid-template-rows: 80px auto;
 }
 #video header {
@@ -467,11 +467,7 @@ body {
   grid-template-columns: 1fr 1fr;
   place-items: center;
 }
-#video-info {
-  background: var(--primaryColor);
-  width: clamp(350px, 85%, 600px);
-  height: 450px;
-}
+
 #video-src {
   width: clamp(350px, 70%, 600px);
 }

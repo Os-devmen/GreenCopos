@@ -81,3 +81,31 @@
     transform: rotate(360deg);
   }
 }
+
+/* globo */
+#cup {
+  fill: #1dee3e;
+}
+#smoke1 {
+  fill: #5f5f5f;
+  animation: smoke 2s linear infinite;
+}
+#smoke2 {
+  fill: #5f5f5f;
+  animation: smoke 2s linear 200ms infinite;
+}
+
+@keyframes smoke {
+  10% {
+    transform: translateY(1px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  90% {
+    transform: translateY(-4px);
+  }
+  100% {
+    transform: translateY(-4px);
+  }
+}
