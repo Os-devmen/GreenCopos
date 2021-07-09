@@ -1,3 +1,18 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -36,10 +51,11 @@
 
 <div>
     <div class="links-container flex-column-center">
-        <a href="#inicio" class="navbar-links">Início</a>
-        <a href="#prologo" class="navbar-links">Motivos</a>
-        <a href="#" class="navbar-links">Solução</a>
-        <a href="#" class="navbar-links">Sobre Nós</a>
+        <a href="#inicio" class="navbar-links">Início <hr></a>
+        <a href="#prologo" class="navbar-links">Motivos<hr></a>
+        <a href="#solution" class="navbar-links">Solução<hr></a>
+        <a href="#video" class="navbar-links">video<hr></a>
+        <a href="#about" class="navbar-links">Sobre Nós<hr></a>
     </div>
 </div>
 
@@ -256,23 +272,30 @@
 </section>
 
 <section class="section" id="video">
-  
-  <p class="heading1">video</p>
+  <header>
+    <p class="heading2">Video Resumo</p>
+    <p class="heading3">bla sobre alguma It</p>
+  </header>
+  <div id="video-wrapper">
+    <div id="video-info"></div>
+    <video id="video-src" controls width="350px" height="auto">
+    <source src="./video/VID-20210615-WA0008.mp4" type="video/mp4">
+    </video>
+  </div>
 </section>
 
-<section class="section" id="about">
-  
+<section class="section flex-column-center" id="about">
   <p class="heading1">sobre nosssss</p>
 </section>
 
 <footer>
   <p id="footer-name"><span style="color: var(--primaryColor);">Green</span>copos</p>
   <div id="footer-links-wrapper">
-    <a href="#" class="footer-links">inico</a>
-    <a href="#" class="footer-links">Motivos</a>
-    <a href="#" class="footer-links">video</a>
+    <a href="#inicio" class="footer-links">inicio</a>
+    <a href="#motivos" class="footer-links">Motivos</a>
+    <a href="#video" class="footer-links">video</a>
   </div>
-  <p class="footer-text">Feito com amor &#9825;  , por AB42</p>
+  <p id="footer-text">Feito com amor &#9825;  , por AB42</p>
 </footer>
 
 <script src="./script.js"></script>
