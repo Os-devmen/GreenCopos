@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://kit.fontawesome.com/70c9e048b3.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: grid;
+            place-items: center;
+            height: 100vh;
+            background: url("docs/img/bgCards.png");
+            background-position: center;
+        }
+
+        .card-wrapper{
+            width: 220px;
+            height: 260px;
+            background: rgba( 0, 0, 0, 0.4);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 10px rgba( 0, 0, 0, 0.4);
+            border-radius: 5px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .avatar{
+            width: 70px;
+            height: 70px;
+            background: #fff;
+            position: absolute;
+            top: -20px;
+            border-radius: 50%;
+        }
+        
+        .card-info{
+            font-size: 1.1rem;
+            color: #fff;
+            text-align: center;
+        }
+        .card-social-wrapper{
+            position: absolute;
+            bottom: 20px;
+            height: 50px;
+            width: 80%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        
+        .card-social{
+    width: 45px;
+    height: 45px;
+    background: rgba(8, 8, 8, 0.658);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.1rem;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="card-wrapper">
+       <div class="avatar">
+
+       </div>
+       <div class="card-info">
+           <p class="card-name">André L. Godinho</p>
+           <p>Turma: 2A</p>
+       </div>
+
+       <div class="card-social-wrapper">
+           <a href="http://"  class="card-social">
+            <i class="fab fa-facebook-f"></i>
+           </a>
+           <a href="http://"  class="card-social">
+            <i class="fab fa-instagram"></i>
+           </a>
+           <a href="http://"  class="card-social">
+            <i class="fab fa-twitter"></i>
+           </a>
+       </div>
+    </div>
+</body>
+</html>
