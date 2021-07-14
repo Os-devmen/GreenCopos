@@ -329,7 +329,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: var(--primaryColor);
+  background: rgba(0, 0, 0, 0.322);
+  backdrop-filter: blur(3px);
   padding-left: 5px;
   margin: 5px;
   width: 550px;
@@ -340,12 +341,12 @@ body {
   margin-right: 10px;
   text-align: left;
   font-size: clamp(1.6rem, 3vw, 3rem);
-  color: #262626;
+  color: var(--primaryColor);
   font-family: var(--font1);
   text-transform: uppercase;
 }
 #prologo-wrapper span {
-  color: #262626;
+  color: #f5f4f4;
   text-align: left;
   font-size: clamp(13px, 1.5vw, 1rem);
 }
@@ -448,7 +449,6 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   place-items: center;
-  overflow: hidden;
 }
 #globo-box * {
   grid-column: 1/2;
@@ -528,6 +528,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  transition: transform 200ms ease-in;
 }
 
 .avatar {
@@ -535,15 +536,23 @@ body {
   height: 70px;
   background: #fff;
   position: absolute;
-  top: -20px;
+  top: 20px;
   border-radius: 50%;
   overflow: hidden;
+  transition: transform 200ms ease-in;
 }
 
 .avatar img {
   width: 100%;
 }
 
+.card-wrapper:hover {
+  transform: translateY(-10px);
+}
+
+.card-wrapper:hover .avatar {
+  transform: scale(1.2);
+}
 .card-info {
   font-size: 1.1rem;
   color: #fff;
@@ -569,6 +578,10 @@ body {
   text-decoration: none;
   color: #fff;
   font-size: 1.1rem;
+}
+
+.card-social:hover {
+  background: rgba(218, 218, 218, 0.527);
 }
 
 @media screen and (max-width: 550px) {
@@ -600,7 +613,7 @@ footer {
 .footer-links {
   text-decoration: none;
   text-transform: uppercase;
-  color: var(--color2)
+  color: var(--color2);
   font-size: clamp(0.6rem, 1vw, 1rem);
 }
 .footer-links:hover {
@@ -709,6 +722,13 @@ footer {
   }
   #prologo-wrapper {
     width: 350px;
+    height: 80%;
+  }
+
+  /* || section: callout */
+  .callout-wrapper {
+    width: 90%;
+    height: 50%;
   }
   /* || section: motivos */
 
@@ -722,6 +742,7 @@ footer {
 
   .topic-img {
     width: 80%;
+    margin-bottom: 10vh;
   }
   .topic-text {
     font-size: 0.9rem;
